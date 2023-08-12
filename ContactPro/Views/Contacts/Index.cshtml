@@ -26,7 +26,7 @@
             <div class="mt-5">
                 <label class="form-label fw-bold">CATEGORY FILTER</label>
 
-                <select name="id" asp-items="@ViewBag.CategoryId" class="form-control"
+                <select name="categoryId" asp-items="@ViewBag.CategoryId" class="form-control"
                         onchange="this.form.submit()" onfocus="this.selectedIndex=-1;this.blur();">
                     <option>All Contacts</option>
                 </select>
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">@Html.DisplayFor(modelItem => contact.FirstName)</h5>
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => contact.FullName)</h5>
                                     <address class="card-text">
                                         @Html.DisplayFor(modelItem => contact.Address1)<br>
                                         @Html.DisplayFor(modelItem => contact.Address2)<br>
